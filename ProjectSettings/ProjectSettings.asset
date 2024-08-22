@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: c7624a0b67c0a0745b3c9ddc5c0ac8d1
+  productGUID: f59b0c08d0d51b34da02080de0368b8b
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -915,10 +915,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: be425758-48c7-46b7-99c0-619871979f54
+  cloudProjectId: 39ccbb86-129f-4dc9-a2d6-7c3dc3d594ed
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Motores2
+  projectName: Motores2 2024-08-21_20-28-08
   organizationId: javierserranoanahuac
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
