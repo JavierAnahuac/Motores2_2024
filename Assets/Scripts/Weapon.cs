@@ -13,8 +13,7 @@ public class Weapon : MonoBehaviour
         {
             GameObject newBullet = Instantiate(bulletPrefab);
             newBullet.transform.position = spawnPoint.position;
-            newBullet.transform.rotation = spawnPoint.rotation;
-            newBullet.GetComponent<Rigidbody>().AddForce(spawnPoint.transform.forward * 100.0f);
+            newBullet.GetComponent<Rigidbody>().AddForce(spawnPoint.forward * 100.0f);
         }
     }
 }
