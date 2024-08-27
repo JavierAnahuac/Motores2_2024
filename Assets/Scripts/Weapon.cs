@@ -7,6 +7,8 @@ public class Weapon : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform spawnPoint;
 
+    private float numer;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
