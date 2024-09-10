@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System.IO;
-using Unity.IO.LowLevel.Unsafe;
 
 public class UIExample : GameMonoBehaviour
 {
@@ -25,9 +23,9 @@ public class UIExample : GameMonoBehaviour
         PointsManager.instance.RemovePoints(10);
     }
 
-    public void OnClick_WinAnahuacEvent()
+    public void OnClick_NoLlegoElProfeEvent()
     {
-        InvokeEvent<WinAnahuacRAffleEvent>(new WinAnahuacRAffleEvent());
+        EventManager.m_Instance.InvokeEvent<NoLlegoElProfeEvent>(new NoLlegoElProfeEvent());
     }
 
 }
