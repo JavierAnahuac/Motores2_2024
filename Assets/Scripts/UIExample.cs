@@ -7,6 +7,7 @@ using TMPro;
 public class UIExample : GameMonoBehaviour
 {
     public TMP_Text scoreText;
+    public Sprite eventSprite;
 
     void Update()
     {
@@ -25,7 +26,13 @@ public class UIExample : GameMonoBehaviour
 
     public void OnClick_NoLlegoElProfeEvent()
     {
-        EventManager.m_Instance.InvokeEvent<NoLlegoElProfeEvent>(new NoLlegoElProfeEvent());
+        object[] parameters = new object[3];
+        parameters[0] = "Motores 2";
+        parameters[1] = Color.red;
+        parameters[2] = eventSprite;
+        EventManager.m_Instance.InvokeEvent<NoLlegoElProfeEvent>(new NoLlegoElProfeEvent(parameters));
+
+        EventManager.m_Instance.InvokeEvent<NoHayClaseEvent>(new NoHayClaseEvent());
     }
 
 }
