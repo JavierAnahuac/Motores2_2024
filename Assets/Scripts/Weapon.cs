@@ -13,8 +13,12 @@ public class Weapon : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            GameObject newBullet = Instantiate(bulletPrefab);
+            /*GameObject newBullet = Instantiate(bulletPrefab);
             newBullet.transform.position = spawnPoint.position;
+            newBullet.GetComponent<Rigidbody>().AddForce(spawnPoint.forward * 100.0f);*/
+
+            Bullet newBullet = null;
+            PoolManager.Instance.SpawnObject<Bullet>(out newBullet, bulletPrefab, spawnPoint.position, spawnPoint.rotation, PoolManager.PoolType.GameObjects);
             newBullet.GetComponent<Rigidbody>().AddForce(spawnPoint.forward * 100.0f);
         }
     }

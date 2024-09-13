@@ -7,6 +7,12 @@ public class Bullet : MonoBehaviour
 {
     private float time = 10;
     private float variantTime = 0;
+
+    private void OnDisable()
+    {
+        variantTime = 0;
+    }
+
     private void Update()
     {
         if(variantTime < time)
@@ -15,14 +21,14 @@ public class Bullet : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            //Destroy(this.gameObject);
+            PoolManager.Instance.ReturnObjectToPool(this.gameObject);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-
-        Destroy(this.gameObject);
-
+        //Destroy(this.gameObject);
+        PoolManager.Instance.ReturnObjectToPool(this.gameObject);
     }
 }
