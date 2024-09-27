@@ -311,6 +311,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2053887145}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4be91fe249dd0774a8743d9e7cf30038,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2053887148}
   m_SourcePrefab: {fileID: 100100000, guid: 4be91fe249dd0774a8743d9e7cf30038, type: 3}
 --- !u!1 &1943709223
 GameObject:
@@ -398,8 +402,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943709223}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.046854887, y: 0.94859904, z: -0.1685126, w: -0.26375735}
-  m_LocalPosition: {x: 516.2415, y: 1.9358729, z: -922.406}
+  m_LocalRotation: {x: -0.08717232, y: 0.8995905, z: -0.21045257, w: -0.37262273}
+  m_LocalPosition: {x: 516.6487, y: 1.9607466, z: -923.1399}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -476,6 +480,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2053887148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053887143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b943d49e262882f4186c122346a771f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
