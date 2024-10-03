@@ -43,19 +43,19 @@ public class TwoDimensionalAnimationStateController : MonoBehaviour
     private void changeVelocity(bool forwardPressed, bool leftPressed, bool rightPressed, bool runPressed, float currentMaxVelocity)
     {
         // if player presses forward, increase velocity in z direction
-        if (forwardPressed && velocityZ < currentMaxVelocity && !runPressed)
+        if (forwardPressed && velocityZ < currentMaxVelocity)
         {
             velocityZ += Time.deltaTime * acceleration;
         }
 
         // if player presses left, increase velocity in left direction
-        if (leftPressed && velocityX > -currentMaxVelocity && !runPressed)
+        if (leftPressed && velocityX > -currentMaxVelocity)
         {
             velocityX -= Time.deltaTime * acceleration;
         }
 
         // if player presses right, increase velocity in right direction
-        if (rightPressed && velocityX < currentMaxVelocity && !runPressed)
+        if (rightPressed && velocityX < currentMaxVelocity)
         {
             velocityX += Time.deltaTime * acceleration;
         }
@@ -87,7 +87,7 @@ public class TwoDimensionalAnimationStateController : MonoBehaviour
         // reset velocity X
         if (!leftPressed && !rightPressed && velocityX != 0.0f && (velocityX > -currentMaxVelocity && velocityX < currentMaxVelocity))
         {
-            velocityX = 0.0f;
+            //velocityX = 0.0f;
         }
     }
 
