@@ -1,5 +1,27 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1107 &-7878607609140596108
+AnimatorStateMachine:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Aiming LAyer
+  m_ChildStates:
+  - serializedVersion: 1
+    m_State: {fileID: 4837284682864271600}
+    m_Position: {x: 280, y: 120, z: 0}
+  m_ChildStateMachines: []
+  m_AnyStateTransitions: []
+  m_EntryTransitions: []
+  m_StateMachineTransitions: {}
+  m_StateMachineBehaviours: []
+  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_EntryPosition: {x: 50, y: 120, z: 0}
+  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+  m_DefaultState: {fileID: 4837284682864271600}
 --- !u!1101 &-7395768023335563809
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -87,7 +109,7 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: a0c947df6b1b3ee42bb194cc5452dcf5, type: 2}
+    m_Motion: {fileID: 7400000, guid: 44c2a781bbadb4d7b9d05ff8f7d70411, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -95,7 +117,7 @@ BlendTree:
     m_DirectBlendParameter: VelocityX
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: ff624919589175e46b3640cf5722787a, type: 2}
+    m_Motion: {fileID: 7400000, guid: eec0eb77a774449e5bb339b6bc6f1fbb, type: 2}
     m_Threshold: 0.16666667
     m_Position: {x: 0, y: 0.5}
     m_TimeScale: 1
@@ -103,7 +125,7 @@ BlendTree:
     m_DirectBlendParameter: VelocityX
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 8a935cfa43d84da4e85551488eb41c59, type: 2}
+    m_Motion: {fileID: 7400000, guid: b0bc7295b032d42409d1bce7f7dffd49, type: 2}
     m_Threshold: 0.33333334
     m_Position: {x: 0, y: 2}
     m_TimeScale: 1
@@ -111,7 +133,7 @@ BlendTree:
     m_DirectBlendParameter: VelocityX
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: ac6fdcc22e3e1424aa2804265c23b830, type: 2}
+    m_Motion: {fileID: 7400000, guid: abb551b374e0c49eaac3efba3be8f28d, type: 2}
     m_Threshold: 0.5
     m_Position: {x: 0.5, y: 0}
     m_TimeScale: 1
@@ -119,7 +141,7 @@ BlendTree:
     m_DirectBlendParameter: VelocityX
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: ed28f9866f83e4f72b9b748df04260d9, type: 2}
+    m_Motion: {fileID: 7400000, guid: 8828fc76e7fad4c67a4cc239b1e86ec9, type: 2}
     m_Threshold: 0.6666667
     m_Position: {x: 2, y: 0}
     m_TimeScale: 1
@@ -127,7 +149,7 @@ BlendTree:
     m_DirectBlendParameter: VelocityX
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 45cd7f7e884544b449ce825ca6e59809, type: 2}
+    m_Motion: {fileID: 7400000, guid: 7903157d990794380ab2d5702f37adb3, type: 2}
     m_Threshold: 0.8333333
     m_Position: {x: -0.5, y: 0}
     m_TimeScale: 1
@@ -135,7 +157,7 @@ BlendTree:
     m_DirectBlendParameter: VelocityX
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: db447fb47ede4458b81af57060ffff62, type: 2}
+    m_Motion: {fileID: 7400000, guid: 5714de262ab2d43f495272e85540521a, type: 2}
     m_Threshold: 1
     m_Position: {x: -2, y: 0}
     m_TimeScale: 1
@@ -278,6 +300,18 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+  - serializedVersion: 5
+    m_Name: Aiming LAyer
+    m_StateMachine: {fileID: -7878607609140596108}
+    m_Mask: {fileID: 31900000, guid: 320c6a97a097d4b16ba2106cec8abbde, type: 2}
+    m_Motions: []
+    m_Behaviours: []
+    m_BlendingMode: 0
+    m_SyncedLayerIndex: -1
+    m_DefaultWeight: 1
+    m_IKPass: 0
+    m_SyncedLayerAffectsTiming: 0
+    m_Controller: {fileID: 9100000}
 --- !u!1102 &60994788571996383
 AnimatorState:
   serializedVersion: 6
@@ -357,6 +391,32 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &4837284682864271600
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Aiming
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 0e17d843f4ba147c3ae9c041145bdb38, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1107 &5611780036589660276
 AnimatorStateMachine:
   serializedVersion: 6
