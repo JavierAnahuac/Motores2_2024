@@ -25,7 +25,7 @@ AnimatorController:
   - serializedVersion: 5
     m_Name: Aiming Layer
     m_StateMachine: {fileID: 7342417852009212406}
-    m_Mask: {fileID: 31900000, guid: 320c6a97a097d4b16ba2106cec8abbde, type: 2}
+    m_Mask: {fileID: 31900000, guid: b6b852d2d03100c49b2929138567a5b1, type: 2}
     m_Motions:
     - serializedVersion: 2
       m_State: {fileID: 6004141077187498168}

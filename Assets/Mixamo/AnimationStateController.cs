@@ -15,7 +15,7 @@ public class AnimationStateController : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        velocityHash = Animator.StringToHash("Velocity");
+        velocityHash = Animator.StringToHash("VelocityX");
     }
 
     // Update is called once per frame
