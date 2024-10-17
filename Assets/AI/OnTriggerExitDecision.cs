@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnTriggerEnterDecision : AIDecision
+public class OnTriggerExitDecision : AIDecision
 {
     private bool hasPlayerEnter;
 
@@ -16,10 +16,10 @@ public class OnTriggerEnterDecision : AIDecision
         return hasPlayerEnter;
     }
 
-    private void OnTriggerEnter(Collider other) {
-       if(other.gameObject.tag == "Player"){
+    private void OnTriggerExit(Collider other) {
+       if(other.gameObject.tag == "Player" && _brain.Target != null){
             hasPlayerEnter = true;
-            _brain.Target = other.transform;
+            _brain.Target = null;
        }
     }
 
@@ -28,5 +28,4 @@ public class OnTriggerEnterDecision : AIDecision
         base.OnEnterState();
         hasPlayerEnter = false;
     }
-
 }

@@ -599,6 +599,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Y Bot@Idle
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 4be91fe249dd0774a8743d9e7cf30038,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7e50268db6da0438da29aeca1d4a731a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -816,8 +821,11 @@ GameObject:
   - component: {fileID: 2123250892}
   - component: {fileID: 2123250897}
   - component: {fileID: 2123250895}
+  - component: {fileID: 2123250901}
   - component: {fileID: 2123250896}
   - component: {fileID: 2123250898}
+  - component: {fileID: 2123250899}
+  - component: {fileID: 2123250900}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -855,7 +863,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   States:
   - StateName: Idle
-    Actions: []
+    Actions:
+    - {fileID: 2123250901}
     Transitions:
     - Decision: {fileID: 2123250896}
       TrueState: FollowTarget
@@ -863,7 +872,14 @@ MonoBehaviour:
   - StateName: FollowTarget
     Actions:
     - {fileID: 2123250898}
-    Transitions: []
+    - {fileID: 2123250901}
+    Transitions:
+    - Decision: {fileID: 2123250899}
+      TrueState: Idle
+      FalseState: 
+    - Decision: {fileID: 2123250900}
+      TrueState: Idle
+      FalseState: 
   BrainActive: 1
   TimeInThisState: 0
   Target: {fileID: 0}
@@ -915,6 +931,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: 
   speed: 0.25
+--- !u!114 &2123250899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123250891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ef332d386cff44e4bd553e558ef018f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+--- !u!114 &2123250900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123250891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5faaae7e20f6fe94dad60258ae885729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  maxTime: 5
+--- !u!114 &2123250901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123250891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28bfc1998274442ff9b1671516635021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
