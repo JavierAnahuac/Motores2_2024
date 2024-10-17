@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class OnTriggerExitDecision : AIDecision
 {
-    private bool hasPlayerEnter;
+    private bool hasPlayerExit;
 
     public override void Initialization()
     {
-        hasPlayerEnter = false;
+        hasPlayerExit = false;
     }
 
     public override bool Decide()
     {
-        return hasPlayerEnter;
+        return hasPlayerExit;
     }
 
     private void OnTriggerExit(Collider other) {
        if(other.gameObject.tag == "Player" && _brain.Target != null){
-            hasPlayerEnter = true;
+            hasPlayerExit = true;
             _brain.Target = null;
        }
     }
@@ -26,6 +26,6 @@ public class OnTriggerExitDecision : AIDecision
     public override void OnEnterState()
     {
         base.OnEnterState();
-        hasPlayerEnter = false;
+        hasPlayerExit = false;
     }
 }
