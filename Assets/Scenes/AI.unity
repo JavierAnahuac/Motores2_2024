@@ -822,7 +822,6 @@ GameObject:
   - component: {fileID: 2123250892}
   - component: {fileID: 2123250897}
   - component: {fileID: 2123250895}
-  - component: {fileID: 2123250901}
   - component: {fileID: 2123250896}
   - component: {fileID: 2123250898}
   - component: {fileID: 2123250899}
@@ -869,7 +868,6 @@ MonoBehaviour:
   - StateName: Idle
     Actions:
     - {fileID: 2123250902}
-    - {fileID: 2123250902}
     Transitions:
     - Decision: {fileID: 2123250896}
       TrueState: FollowTarget
@@ -877,12 +875,11 @@ MonoBehaviour:
   - StateName: FollowTarget
     Actions:
     - {fileID: 2123250898}
-    - {fileID: 2123250898}
     Transitions:
-    - Decision: {fileID: 2123250899}
+    - Decision: {fileID: 2123250900}
       TrueState: ReturnOrigin
       FalseState: 
-    - Decision: {fileID: 2123250900}
+    - Decision: {fileID: 2123250899}
       TrueState: ReturnOrigin
       FalseState: 
   - StateName: ReturnOrigin
@@ -971,19 +968,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: 
   maxTime: 5
---- !u!114 &2123250901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123250891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28bfc1998274442ff9b1671516635021, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Label: 
 --- !u!114 &2123250902
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -24,6 +24,7 @@ public class OnTriggerEnterDecision : AIDecision
             {
                 returnOriginComponent.originPos = transform.position;
             }
+
             if (TryGetComponent<DistanceDecision>(out DistanceDecision distanceDecisionComponent))
             {
                 distanceDecisionComponent.originPos = transform.position;
