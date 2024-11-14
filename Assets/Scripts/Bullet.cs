@@ -23,6 +23,7 @@ public class Bullet : MonoBehaviour
         {
             //Destroy(this.gameObject);
             PoolManager.Instance.ReturnObjectToPool(this.gameObject);
+            AudioManager.instance.PlayAudio(AudioType.SFX, "MonoGriton");
         }
     }
 
